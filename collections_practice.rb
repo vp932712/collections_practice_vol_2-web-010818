@@ -44,10 +44,32 @@ end
 
 
 
-def count_elements(array)
-  array.each_with_object(Hash.new(0)) { |g,h| h[g[:name]] += 1 }.
-    map { |name, count| { :name=>name, :count=>count } }
+def count_elements(arr)
+  final = []
+  obj ={}
+  counts = Hash.new 0
+  empty = []
+  arr.each do |obj|
+    # puts obj
+    obj.each do |key, value|
+      empty.push(value)
+    end
+
   end
+ empty.each do |word|
+  # counts[:"name"]= word
+  counts[word] += 1
+end
+  counts.each do |key, value|
+    obj[:"name"] = key
+    obj[:"count"] = value
+    final.push(obj)
+    obj ={}
+  end
+  final
+
+end
+
 
 
 def merge_data(v1, v2)
