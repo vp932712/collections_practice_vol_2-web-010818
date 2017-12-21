@@ -80,7 +80,7 @@ def find_cool(cool)
   arr = []
   cool.each do |key|
     key.each do |key1, value|
-      
+
       if value == "cool"
       arr.push(key)
       end
