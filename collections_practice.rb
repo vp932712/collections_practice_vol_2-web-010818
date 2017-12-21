@@ -75,3 +75,18 @@ end
 def merge_data(v1, v2)
 v1[0].values.map.with_index {|v, i| v2[i].merge(v)}
 end
+
+def find_cool(cool)
+  arr = []
+  cool.each do |key|
+    key.each do |key1, value|
+      
+      if value == "cool"
+      arr.push(key)
+      end
+  end
+
+end
+
+arr
+end
