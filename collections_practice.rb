@@ -91,13 +91,18 @@ end
 arr
 end
 
-def organize_schools(obj)
-  final = {}
-  obj.each do |key, value|
 
-    value.each do |loc, city|
-      final[city] = [key]
-    end
+def organize_schools(obj)
+final = {}
+obj.each do |key, value|
+  
+  value.each do |loc, city|
+    if final[city] == nil
+    final[city] = [key]
+  else
+    final[city].push(key)
   end
-  final
+  end
+end
+final
 end
