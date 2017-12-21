@@ -90,3 +90,14 @@ end
 
 arr
 end
+
+def organize_schools(obj)
+  final = {}
+  obj.each do |key, value|
+
+    value.each do |loc, city|
+      final[city] = [key]
+    end
+  end
+  final
+end
