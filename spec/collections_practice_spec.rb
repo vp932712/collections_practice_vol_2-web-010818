@@ -4,47 +4,49 @@ describe 'collections practice vol 2.' do
 
   let(:keys) {
     [
-           {
-            :first_name => "blake"
-        },
-           {
-            :first_name => "ashley"
-        }
-    ]
+  {
+     "blake" => {
+       :awesomeness => 10,
+       :height => "74",
+       :last_name => "johnson"
+     },
+      "ashley" => {
+        :awesomeness => 9,
+        :height => 60,
+        :last_name => "dubs"
+     }
+   }
+]
   }
 
   let(:data) {
+
     [
-           {
-             "blake" => {
-                :awesomeness => 10,
-                     :height => "74",
-                  :last_name => "johnson"
-            },
-            "ashley" => {
-                :awesomeness => 9,
-                     :height => 60,
-                  :last_name => "dubs"
-            }
-        }
-    ]
+{
+:first_name => "blake"
+},
+{
+:first_name => "ashley"
+}
+]
+
   }
 
   let(:merged_data) {
     [
-           {
-             :first_name => "blake",
-            :awesomeness => 10,
-                 :height => "74",
-              :last_name => "johnson"
-        },
-           {
-             :first_name => "ashley",
-            :awesomeness => 9,
-                 :height => 60,
-              :last_name => "dubs"
-        }
-    ]
+   {
+      :first_name => "blake",
+      :awesomeness => 10,
+      :height => "74",
+      :last_name => "johnson"
+   },
+   {
+      :first_name => "ashley",
+      :awesomeness => 9,
+      :height => 60,
+      :last_name => "dubs"
+   }
+]
   }
 
   let(:cool) {
@@ -115,13 +117,13 @@ describe 'collections practice vol 2.' do
     # Question 3
 
     it "Return the first element that begins with the letters 'wa'" do
-      expect(first_wa(["candy", :pepper, "wall", :ball, "wacky"])).to eq("wall")
+      expect(first_wa(["candy",  "wall",  "wacky"])).to eq("wall")
     end
 
   end
 
   describe '#remove_non_strings' do
-    
+
     # Hint: Use the method "class"  "blake".class
 
     # Question 4
